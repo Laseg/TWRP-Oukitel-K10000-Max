@@ -1,0 +1,3 @@
+PRODUCT_MAKEFILES := \
+$(LOCAL_DIR)/K10000_Max.mk \
+$(LOCAL_DIR)/omni_K10000_Max.mk
