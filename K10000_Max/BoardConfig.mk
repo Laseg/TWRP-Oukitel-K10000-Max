@@ -1,5 +1,4 @@
 # Architecture
-#
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_ABI := armeabi-v7a
@@ -48,6 +47,7 @@ BOARD_MKBOOTIMG_ARGS :=  --base $(BOARD_KERNEL_BASE) --pagesize $(BOARD_KERNEL_P
 TARGET_PREBUILT_KERNEL :=  device/Oukitel/K10000_Max/kernel
 #TARGET_PREBUILT_RECOVERY_KERNEL := $(DEVICE_FOLDER)/kernel
 
+TARGET_RECOVERY_DEVICE_DIRS := device/Oukitel/K10000_Max
 TARGET_RECOVERY_INITRC := device/Oukitel/K10000_Max/recovery/root/init.rc
 TARGET_RECOVERY_FSTAB := device/Oukitel/K10000_Max/recovery/root/etc/recovery.fstab
 
@@ -72,7 +72,7 @@ BOARD_HAS_REMOVABLE_STORAGE := true
 
 # USB Mounting
 #TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/mt_usb/musb-hdrc.0.auto/gadget/lun%d/file
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/virtual/android_usb/android0/f_mass_storage/lun/file
+#TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/virtual/android_usb/android0/f_mass_storage/lun/file
 
 #fix Wipe
 BOARD_SUPPRESS_EMMC_WIPE := true
@@ -121,7 +121,9 @@ TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_NTFS_3G := true
 TW_NO_EXFAT_FUSE := true
 
-#TWHAVE_SELINUX := true
+TWHAVE_SELINUX := true
+
+TWRP_EVENT_LOGGING := true
 #TW_INPUT_BLACKLIST := "hbtp_vm"
 #BOARD_HAS_NO_SELECT_BUTTON := true
 #BOARD_HAS_NO_REAL_SDCARD := # 
