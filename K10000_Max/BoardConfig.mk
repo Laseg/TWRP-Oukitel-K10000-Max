@@ -77,7 +77,7 @@ BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 BOARD_HAS_REMOVABLE_STORAGE := true
 
 # USB Mounting
-#TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/mt_usb/musb-hdrc.0.auto/gadget/lun%d/file
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/mt_usb/musb-hdrc.0.auto/gadget/lun%d/file
 #TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/virtual/android_usb/android0/f_mass_storage/lun/file
 
 #fix Wipe
@@ -121,16 +121,16 @@ TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
 #TW_SCREEN_BLANK_ON_BOOT := true
 TW_REBOOT_BOOTLOADER := true
 TW_FLASH_FROM_STORAGE := true
-TW_EXCLUDE_SUPERSU := true
+#TW_EXCLUDE_SUPERSU := true
 TW_INCLUDE_CRYPTO := true
-TW_INCLUDE_NTFS_3G := true
-TW_NO_EXFAT_FUSE := true
+#TW_INCLUDE_NTFS_3G := true
+#TW_NO_EXFAT_FUSE := true
 
 #TWHAVE_SELINUX := true
 
 #TWRP_EVENT_LOGGING := true
 #TW_INPUT_BLACKLIST := "hbtp_vm"
-#BOARD_HAS_NO_SELECT_BUTTON := true
+BOARD_HAS_NO_SELECT_BUTTON := true
 #BOARD_HAS_NO_REAL_SDCARD := # 
 #TW_DEFAULT_EXTERNAL_STORAGE := true
 #TW_NO_USB_STORAGE := true
